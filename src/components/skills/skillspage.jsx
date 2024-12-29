@@ -8,25 +8,18 @@ import SkillsCard from "../ui/SkillsCard";
 
 const skillCategories = [
   {
-    title: "Frontend",
-    skills: ["React", "Redux", "HTML5", "CSS3", "JavaScript", "TypeScript", "Tailwind CSS"],
-    className: "border-cyan-300"
+    title1: "Frontend",
+    skills1: ["React", "Redux", "HTML5", "CSS3", "JavaScript", "TypeScript", "Tailwind CSS"],
+    title2: "Backend",
+    skills2: ["Node.js", "Express", "Java"],
   },
   {
-    title: "Backend",
-    skills: ["Node.js", "Express", "Java"],
-    className: "border-purple-200"
+    title1: "Databases",
+    skills1: ["MongoDB", "Firebase"],
+    title2: "Tools & Platforms",
+    skills2: ["Git", "GitHub", "Vercel", "VS Code", "Postman"],
   },
-  {
-    title: "Databases",
-    skills: ["MongoDB", "Firebase"],
-    className: "border-purple-200"
-  },
-  {
-    title: "Tools & Platforms",
-    skills: ["Git", "GitHub", "Vercel", "VS Code", "Postman"],
-    className: "border-cyan-300"
-  }
+  
 ];
 
 const Skills = () => {
@@ -38,7 +31,7 @@ const Skills = () => {
       <h2 className="block md:hidden text-4xl font-bold text-center mb-10 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-cyan-300 uppercase">
         Tech Stack
       </h2>
-      <div className="w-full flex flex-col lg:flex-row gap-10">
+      <div className="w-full flex flex-col lg:flex-row gap-7">
         
         {/* Left - Cloud Icon */}
         <div className="lg:w-2/5 mb-8 lg:mb-0 flex justify-center">
@@ -49,9 +42,11 @@ const Skills = () => {
         <div className="lg:w-3/5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-5 px-4 md:px-8 lg:px-10">
           
           {skillCategories.map((category, index) => (
+            <div key={index} className="gap-5 flex flex-col" >
+           
             <motion.div 
-              key={index} 
-              className={`hover:scale-105 hover:shadow-2xl transition-all duration-300 transform ${category.className}`}
+              
+              className={`hover:scale-105 hover:shadow-2xl transition-all duration-300 transform flex justify-center items-center `}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
@@ -59,10 +54,10 @@ const Skills = () => {
             <SkillsCard>
 
               <HyperText className="text-[1.5rem] font-extrabold mb-2 text-blue-400 transition-all duration-300 hover:text-blue-500">
-                {category.title}
+                {category.title1}
               </HyperText>
               <div className="flex flex-wrap gap-2 ">
-                {category.skills.map((skill, skillIndex) => (
+                {category.skills1.map((skill, skillIndex) => (
                   <CoolMode key={skillIndex}>
                     <motion.span
                       className="px-4 py-2 bg-cyan-600 text-gray-100 rounded-full text-sm font-medium cursor-pointer hover:bg-blue-500 hover:text-white transition-all duration-300 ease-in-out"
@@ -75,6 +70,33 @@ const Skills = () => {
               </div>
             </SkillsCard>
             </motion.div>
+            <motion.div 
+              className={`hover:scale-105 hover:shadow-2xl transition-all duration-300 transform flex justify-center items-center `}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.1 }}
+            >
+            <SkillsCard>
+
+              <HyperText className="text-[1.5rem] font-extrabold mb-2 text-blue-400 transition-all duration-300 hover:text-blue-500">
+                {category.title2}
+              </HyperText>
+              <div className="flex flex-wrap gap-2 ">
+                {category.skills2.map((skill, skillIndex) => (
+                  <CoolMode key={skillIndex}>
+                    <motion.span
+                      className="px-4 py-2 bg-cyan-600 text-gray-100 rounded-full text-sm font-medium cursor-pointer hover:bg-blue-500 hover:text-white transition-all duration-300 ease-in-out"
+                      whileHover={{ scale: 1.1, rotate: 5 }}
+                      >
+                      {skill}
+                    </motion.span>
+                  </CoolMode>
+                ))}
+              </div>
+            </SkillsCard>
+            </motion.div>
+            </div>
+            
 
 
 

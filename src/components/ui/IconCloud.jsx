@@ -17,7 +17,7 @@ export const cloudProps = {
     reverse: true,
     depth: 1,
     wheelZoom: false,
-    imageScale: 1, // Reduce this to make icons smaller
+    imageScale: 1.2, // Reduce this to make icons smaller
     activeCursor: "pointer",
     tooltip: "native",
     initial: [0.1, -0.1],
