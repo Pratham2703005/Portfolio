@@ -34,7 +34,7 @@ const Skills = () => {
       document.title = "Pratham's Portfolio - skills";
     },[])
   return (
-    <div className="min-h-screen text-white py-32  px-4 sm:px-6 lg:px-8 w-full z-[49] select-none">
+    <div className="min-h-screen text-white py-28  px-4 sm:px-6 lg:px-8 w-full z-[49] select-none">
       <h2 className="block md:hidden text-4xl font-bold text-center mb-10 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-cyan-300 uppercase">
         Tech Stack
       </h2>
@@ -58,7 +58,7 @@ const Skills = () => {
             >
             <SkillsCard>
 
-              <HyperText className="text-[1.75rem] font-extrabold mb-4 text-blue-400 transition-all duration-300 hover:text-blue-500">
+              <HyperText className="text-[1.5rem] font-extrabold mb-2 text-blue-400 transition-all duration-300 hover:text-blue-500">
                 {category.title}
               </HyperText>
               <div className="flex flex-wrap gap-2 ">
@@ -89,14 +89,14 @@ const Skills = () => {
           >
             <SkillsCard>
 
-            <HyperText className="text-[1.75rem] font-semibold mb-4 text-blue-400 transition-all duration-300 hover:text-blue-500">
+            <HyperText className="text-[1.5rem] font-semibold mb-2 text-blue-400 transition-all duration-300 hover:text-blue-500">
               Problem Solving - DSA (C++)
             </HyperText>
-            <p className="text-gray-300 text-lg mb-4" style={{ userSelect: "none" }}>
+            <p className="text-gray-300 text-lg" style={{ userSelect: "none" }}>
               Passionate about solving complex problems using C++ in Data Structures and Algorithms (DSA). Continuously enhancing my skills through competitive coding platforms and algorithmic challenges.
             </p>
 
-            <div className="mt-6 flex gap-6 justify-start flex-wrap">
+            <div className="mt-2 flex gap-6 justify-start flex-wrap">
               <Link to="https://leetcode.com/u/Pratham012/" target="_blank">
                 
                 <motion.button 

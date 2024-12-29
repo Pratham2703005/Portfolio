@@ -5,7 +5,7 @@ import CoolMode from "../ui/CoolMode"
 import { HyperText } from "../ui/HyperText"
 const Education = ({isHyperTextVisible, hyperTextRef}) => {
   return (
-    <div className="mt-20 space-y-16 w-[80%] mx-auto select-none">
+    <div className="mt-16 space-y-16 w-[80%] mx-auto select-none">
       <CoolMode>
 
       <h3 className="text-5xl font-extrabold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-cyan-300 text-center">

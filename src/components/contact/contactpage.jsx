@@ -53,14 +53,14 @@ const Contact = () => {
   };
 
   return (
-    <section className="py-40 md:py-16 text-white h-full w-full relative select-none">
+    <section className="py-32 md:py-12 text-white h-full w-full relative select-none">
       <div className="absolute inset-0 pointer-events-none"></div>
       <div className="flex flex-col md:flex-row container mx-auto px-4 relative z-10 items-center">
         {/* Left Side Text */}
         <div className="w-full md:w-1/2 px-4 sm:px-16  md:px-24 lg:px-32 select-none">
           <CoolMode>
             <motion.h2
-              className="text-5xl font-extrabold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-cyan-300"
+              className="text-4xl font-extrabold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-cyan-300"
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, ease: 'easeInOut' }}
@@ -86,7 +86,7 @@ const Contact = () => {
             <div>
               <label
                 htmlFor="name"
-                className="block text-lg font-semibold select-none"
+                className="block text-md font-semibold select-none"
               >
                 Name
               </label>
@@ -104,7 +104,7 @@ const Contact = () => {
             <div>
               <label
                 htmlFor="email"
-                className="block text-lg font-semibold select-none"
+                className="block text-md font-semibold select-none"
               >
                 Email
               </label>
@@ -122,7 +122,7 @@ const Contact = () => {
             <div>
               <label
                 htmlFor="message"
-                className="block text-lg font-semibold select-none"
+                className="block text-md font-semibold select-none"
               >
                 Message
               </label>
