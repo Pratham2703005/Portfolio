@@ -7,6 +7,11 @@ module.exports = {
   ],
   theme: {
     extend: {
+      build: {
+        rollupOptions: {
+          external: ['emailjs-com'],
+        },
+      },
       colors: {
         "mid-blue": "#8f9ba8",
       },
