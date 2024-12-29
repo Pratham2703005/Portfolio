@@ -47,7 +47,7 @@ const Popup = ({ show, setShow }) => {
                         <FaEnvelope className='text-white' size={18} /> Send Email
                     </p>
                 </Link>
-                <Link to={"https://github.com/"} target='_blank' onClick={() => setShow(false)}>
+                <Link to={"https://github.com/Pratham2703005/Portfolio"} target='_blank' onClick={() => setShow(false)}>
                     <p className="hover:cursor-pointer text-mid-blue hover:text-white h-fit hover:bg-[#333033] px-6 py-3 font-[300] text-base flex items-center gap-3">
                         <FaCode className='text-white' size={18} /> View Source
                     </p>
