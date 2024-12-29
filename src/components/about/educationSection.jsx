@@ -30,12 +30,14 @@ const Education = ({isHyperTextVisible, hyperTextRef}) => {
             I am currently pursuing my <span className="font-semibold text-blue-300">Bachelor's in Computer Science</span>  at FET Agra College. I am focused on gaining
             deep knowledge of computer science principles, algorithms, and software development.
           </p>
-          {isHyperTextVisible && (
+          
             <p className="text-lg font-semibold">
               Current CGPA:{" "}
+              {isHyperTextVisible && (
               <HyperText className={"text-cyan-300 text-xl inline"}>7.325</HyperText>
+            )}
             </p>
-          )}
+          
         </div>
       </div>
 
@@ -48,19 +50,23 @@ const Education = ({isHyperTextVisible, hyperTextRef}) => {
           <p className="text-lg leading-relaxed">
             I completed my schooling at St. Queen Mary's Public School, where I pursued the <span className="font-semibold text-blue-300">PCM stream</span>. I was actively involved in extracurricular activities and developed a passion for technology and programming during this time.
           </p>
-          {isHyperTextVisible && (
+          
             <>
               <p className="text-lg font-semibold">
                 12th Grade (PCM): {" "}
+                {isHyperTextVisible && (
                 <HyperText className={"text-cyan-300 text-xl inline"}>85%</HyperText>
+                )}
               </p>
               <p className="text-lg font-semibold">
                 10th Grade:{" "}
+                {isHyperTextVisible && (
                 <HyperText className={"text-cyan-300 text-xl inline"}>72.3%</HyperText>
+                )}
               </p>
               
             </>
-          )}
+         
         </div>
         <div className="w-full md:w-1/3">
           <img

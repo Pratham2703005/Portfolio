@@ -19,7 +19,7 @@ const About = () => {
       ([entry]) => {
         setIsHyperTextVisible(entry.isIntersecting);
       },
-      { threshold: 0.1 }
+      { threshold: 0.00001 }
     );
 
     if (hyperTextRef.current) {

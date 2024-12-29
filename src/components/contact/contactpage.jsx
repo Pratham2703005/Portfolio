@@ -60,7 +60,7 @@ const Contact = () => {
         <div className="w-full md:w-1/2 px-4 sm:px-16  md:px-24 lg:px-32 select-none">
           <CoolMode>
             <motion.h2
-              className="text-4xl font-extrabold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-cyan-300"
+              className="text-5xl font-extrabold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-cyan-300"
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, ease: 'easeInOut' }}
@@ -70,7 +70,7 @@ const Contact = () => {
           </CoolMode>
           <TypingEffect
             text="I'd love to hear from you! Whether you have a question, want to collaborate, or just want to say hi, feel free to reach out."
-            speed={50}
+            speed={30}
             eraseSpeed={1000}
             typingDelay={500}
             eraseDelay={20000000}

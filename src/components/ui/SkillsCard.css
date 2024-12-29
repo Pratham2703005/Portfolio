@@ -56,5 +56,5 @@
 }
 
 .card:hover::before {
-  transform: rotate(-5deg)  scaleY(0.77);
+  transform: rotate(-5deg)  scaleY(0.9);
 }
