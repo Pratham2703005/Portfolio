@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React from 'react'
-import { Link, Route, Routes } from 'react-router'
+import { Link, Route, Routes } from 'react-router-dom'
 import Navbar from './components/Nav/navbar'
 import './App.css'
 import Home from './components/home/homepage'
