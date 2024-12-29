@@ -1,0 +1,28 @@
+*{
+    font-family: "Kanit", sans-serif;
+}
+
+.App{
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    min-height: 100vh;
+    overflow-y: hidden;
+}
+
+body{
+    background: linear-gradient(135deg, #08070b, #1a1a1f);
+    overflow-x: hidden;
+}
+
+kbd{
+    background-color: #8f9ba8;
+    border-radius: 5px;
+    color: #08070b;
+    font-weight: bold;
+    padding: 2px 4px;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
