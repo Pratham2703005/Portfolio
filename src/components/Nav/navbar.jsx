@@ -51,15 +51,16 @@ const Navbar = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0  transition-all duration-300 ${
         scrolled
           ? 'bg-black bg-opacity-80 backdrop-blur-md shadow-lg'
           : 'bg-transparent'
       }`}
+      style={{zIndex:"19"}}
     >
       
 
-      <div className="w-full mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 ">
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="flex-shrink-0">
             <h1 className="text-5xl font-bold text-white hover:text-gray-300 transition duration-300">

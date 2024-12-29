@@ -63,14 +63,15 @@ const Popup = ({ show, setShow }) => {
         <AnimatePresence>
 
             {show && (
-           <div className="fixed inset-0 flex justify-center items-center z-50">
-           <div className="absolute inset-0 bg-black opacity-50 z-10"></div>
+           <div className="fixed inset-0 flex justify-center items-center z-20">
+           <div className="absolute inset-0 bg-black opacity-50 z-30"/>
            <motion.div
-               className="relative w-3/4 md:w-2/5 max-h-[80vh] bg-[#1c191c] rounded-md z-20 overflow-y-auto"
+               className="relative w-3/4 md:w-2/5 max-h-[80vh] bg-[#1c191c] rounded-md  overflow-y-auto"
                initial="hidden"
                animate="visible"
                exit="exit"
                variants={popupVariants}
+               style={{zIndex: "31"}}
            >
                <div className="flex justify-between items-center pt-3 pb-2">
                    <small className="uppercase text-white font-light text-[12px] px-6">general</small>
