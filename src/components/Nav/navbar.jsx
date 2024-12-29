@@ -44,6 +44,9 @@ const Navbar = () => {
   }, [location.pathname]);
 
   return (
+    <>
+    {show && <Popup show={show} setShow={setShow} />}
+    
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
@@ -54,7 +57,7 @@ const Navbar = () => {
           : 'bg-transparent'
       }`}
     >
-      {show && <Popup show={show} setShow={setShow} />}
+      
 
       <div className="w-full mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
@@ -109,6 +112,7 @@ const Navbar = () => {
       
       
     </motion.nav>
+    </>
   );
 };
 

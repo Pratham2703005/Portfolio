@@ -15,7 +15,7 @@ const Achievements = () => {
   };
 
   return (
-    <section className="text-white px-6 md:px-20 w-full md:w-[90%] md:mx-auto py-32 md:py-40 z-20 select-none">
+    <section className="text-white md:px-20 w-full md:w-[90%] md:mx-auto py-32 md:py-40 z-20 select-none">
       <h2 className="uppercase block md:hidden text-4xl font-bold text-center mb-10 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-cyan-300">
         Achievements and Certificates
       </h2>

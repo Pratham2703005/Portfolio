@@ -68,7 +68,7 @@ const Home = () => {
                 
                 <GlitchButton 
 
-                      className="inline-flex items-center whitespace-nowrap px-4 py-3 text-sm sm:text-base
+                      className="max-w-full inline-flex items-center whitespace-nowrap px-auto md:px-4 py-3 text-sm sm:text-base
                                   bg-white/10 hover:bg-white/15 backdrop-blur-sm 
                                   text-white rounded-lg border border-white/10
                                   transition-all duration-300 group
