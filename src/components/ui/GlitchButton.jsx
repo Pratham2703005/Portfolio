@@ -2,7 +2,7 @@
 import './GlitchButton.css';
 const GlitchButton = ({children, className, onClick}) => {
   return (
-    <button className={`!px-2 sm:px-[50px] ${className}`} onClick={onClick} id="glitch"  >
+    <button className={`!px-4 sm:!px-12 ${className}`} onClick={onClick} id="glitch"  >
     {children}
     </button>
   )
