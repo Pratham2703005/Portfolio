@@ -13,6 +13,7 @@ const Projects = () => {
       description:
         "This project is a web application designed to perform semantic segmentation on satellite imagery. Using React and Tailwind CSS for the front-end, it integrates Google Earth Engine for image retrieval and Leaflet for mapping and displaying segmented features. I created API endpoints to process the segmentation and enable users to export results in GeoJSON and KML formats for further analysis. Additionally, I utilized React Joyride to build interactive guided tours, ensuring a smooth and responsive user experience across devices.",
       repoLink: "https://github.com/Pratham2703005/Semantic-Segmentation-SIH",
+      liveLink: "https://semantic-segmentation-sih.vercel.app/",
       techStack: ["/skills/React.svg", "/skills/tail.svg", "/skills/python.svg", "/skills/mui.svg", "/skills/js.svg", "/skills/firebase.svg"],
     },
     {
