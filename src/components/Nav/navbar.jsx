@@ -51,7 +51,7 @@ const Navbar = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
-      className={`fixed top-0 left-0 right-0  transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0  transition-all duration-300 select-none ${
         scrolled
           ? 'bg-black bg-opacity-80 backdrop-blur-md shadow-lg'
           : 'bg-transparent'
