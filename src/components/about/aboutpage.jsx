@@ -57,32 +57,35 @@ const About = () => {
               isVisible ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'
             }`}
           >
-            <CoolMode>
-
-            <h2 className="text-5xl font-extrabold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-cyan-300">
+           <CoolMode>
+            <h2 className="text-4xl sm:text-5xl font-extrabold mb-0 sm:mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-cyan-300">
               <TypingEffect
-                text="Hello, I'm Pratham Israni"
+                text="Hi, this is Pratham Israni"
                 speed={50}
                 eraseSpeed={1000}
                 typingDelay={500}
                 eraseDelay={20000000}
-                />
+              />
             </h2>
-                </CoolMode>
-            <p className="text-lg leading-relaxed">
-              As a passionate <span className="font-semibold text-cyan-300">Software Developer</span> and{' '}
-              <span className="font-semibold text-blue-300">Competitive Programmer</span>, I thrive on solving
-              challenging problems and building innovative solutions. With a strong focus on clean, efficient code, I
-              love diving into new technologies and improving my skills through continuous learning.
-            </p>
-            <p className="text-lg leading-relaxed">
-              Whether it's tackling algorithmic challenges, developing dynamic web applications, or exploring new tech
-              stacks, I'm always eager to take on new projects. I believe in pushing boundaries and constantly evolving,
-              both as a programmer and as an individual.
-            </p>
-            <p className="text-lg font-semibold italic">
-              Take a look at my portfolio to explore my projects and the skills I've acquired along the way. 🚀
-            </p>
+          </CoolMode>
+
+          <p className="text-lg leading-relaxed">
+            I'm a passionate <span className="font-semibold text-cyan-300">Software Developer</span> and{' '}
+            <span className="font-semibold text-blue-300">Competitive Programmer</span>, driven by my love for solving complex
+            problems and creating impactful solutions. With a strong focus on writing clean, efficient code, I enjoy diving into
+            emerging technologies and constantly enhancing my skills.
+          </p>
+
+          <p className="text-lg leading-relaxed">
+            Whether it's tackling algorithmic challenges, building dynamic web applications, or exploring the latest tech
+            trends, I'm always up for taking on new projects. I believe in pushing boundaries and constantly evolving, both
+            as a programmer and as an individual.
+          </p>
+
+          <p className="text-lg font-semibold italic">
+            Feel free to explore my portfolio to check out the projects I've worked on and the skills I've honed over time. 🚀
+          </p>
+
 
             {/* Resume Buttons */}
             <div className="mt-8">

@@ -118,20 +118,21 @@ const Skills = () => {
               Passionate about solving complex problems using C++ in Data Structures and Algorithms (DSA). Continuously enhancing my skills through competitive coding platforms and algorithmic challenges.
             </p>
 
-            <div className="mt-2 flex gap-6 justify-start flex-wrap">
-              <Link to="https://leetcode.com/u/Pratham012/" target="_blank">
+            <div className="mt-2 flex gap-2 md:gap-4 justify-start flex-wrap w-full">
+              <Link to="https://leetcode.com/u/Pratham012/"  className="w-full md:w-auto" target="_blank">
                 
                 <motion.button 
-                  className="bg-blue-600 text-white py-3 px-6 rounded-lg text-sm font-medium cursor-pointer hover:bg-blue-500 transition-all duration-300 transform hover:scale-105"
-                  whileHover={{ scale: 1.1 }}
+                  className="bg-blue-600 w-full text-white py-3 px-6 rounded-lg text-sm font-medium cursor-pointer hover:bg-blue-500 transition-all duration-300 transform hover:scale-105"
+                  whileHover={{ scale: 1.05 }}
                   >
                   Progress on LeetCode
                 </motion.button>
               </Link>
-              <Link to="https://www.geeksforgeeks.org/user/pk2732004/" target="_blank">
+              <Link to="https://www.geeksforgeeks.org/user/pk2732004/" className="w-full md:w-auto" 
+              target="_blank">
                 <motion.button 
-                  className="bg-transparent border-2 border-blue-600 text-blue-600 py-3 px-6 rounded-lg text-sm font-medium cursor-pointer hover:bg-blue-600 hover:text-white transition-all duration-300 transform hover:scale-105"
-                  whileHover={{ scale: 1.1 }}
+                  className="bg-transparent w-full border-2 border-blue-600 text-blue-600 py-3 px-6 rounded-lg text-sm font-medium cursor-pointer hover:bg-blue-600 hover:text-white transition-all duration-300 transform hover:scale-105"
+                  whileHover={{ scale: 1.05 }}
                   >
                   Progress on GFG
                 </motion.button>

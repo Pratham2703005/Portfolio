@@ -35,7 +35,7 @@ const Home = () => {
                 </h1>
                 
                 {/* Type animation with fixed height to prevent layout shift */}
-                <div className="h-16 sm:h-20 flex items-center justify-center sm:justify-start">
+                <div className="h-16 sm:h-14 flex items-center justify-center sm:justify-start">
                   <TypeAnimation
                     sequence={[
                       "Programmer.",
