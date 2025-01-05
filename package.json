@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "blobity": "^0.2.3",
+    "clsx": "^2.1.1",
     "emailjs-com": "^3.2.0",
     "framer-motion": "^11.15.0",
     "motion": "^11.15.0",
@@ -26,6 +27,7 @@
     "react-type-animation": "^3.2.0",
     "react-typing-effect": "^2.0.5",
     "sass": "^1.83.1",
+    "tailwind-merge": "^2.6.0",
     "uuid": "^11.0.3"
   },
   "devDependencies": {

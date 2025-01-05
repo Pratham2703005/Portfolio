@@ -1,9 +1,10 @@
 /* eslint-disable react/prop-types */
-import { useState, useEffect } from 'react';
-import CoolMode from '../ui/CoolMode';
-import MagicCard from '../ui/MagicCard'; // Assuming MagicCard is in the same folder as CoolMode
+import  { useState, useEffect } from "react";
+import { CardBody,CardContainer,CardItem } from "../ui/Card3D";
+import { Link } from "react-router";
+import CoolMode from "../ui/CoolMode";
 
-const ProjectCard = ({ image, title, description, liveLink, repoLink, techStack }) => {
+export function ProjectCard({ image, title, description, liveLink, repoLink, techStack }) {
   const [isExpanded, setIsExpanded] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
@@ -12,94 +13,105 @@ const ProjectCard = ({ image, title, description, liveLink, repoLink, techStack 
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 768); // Mobile screens are 768px or less
     };
-    
-    handleResize(); // Check screen size initially
-    window.addEventListener('resize', handleResize); // Add event listener to resize window
-    return () => window.removeEventListener('resize', handleResize); // Cleanup
+
+    handleResize(); // Initial check
+    window.addEventListener("resize", handleResize); // Add listener
+    return () => window.removeEventListener("resize", handleResize); // Cleanup
   }, []);
 
   const handleToggleDescription = () => {
     setIsExpanded(!isExpanded);
   };
 
-  const charLimit = isMobile ? 150 : 300; // Adjust char limit based on screen size
+  const charLimit = isMobile ? 150 : 300;
 
   return (
-    <MagicCard
-      gradientSize={250}  // Customize the gradient size if needed
-      gradientColor="#262626"
-      gradientOpacity={0.8}
-      gradientFrom="#3b82f6"
-      gradientTo="#3b82f6"
-      className="rounded-lg overflow-hidden shadow-md transition-transform transform hover:scale-[1.01] relative"
-    >
-      <div className="relative">
-        <div className="aspect-w-16 aspect-h-9">
+    <CardContainer className="inter-var">
+      <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl p-6 border">
+        {/* Project Title */}
+        <CardItem
+          translateZ="50"
+          className="text-xl font-bold text-neutral-600 dark:text-white"
+        >
+          {title}
+        </CardItem>
+
+        {/* Project Image */}
+        <CardItem translateZ="100" className="w-full mt-4 relative">
           <img
             src={image}
+            height={1000}
+            width={1000}
+            className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
             alt={title}
-            className="w-full h-full object-cover"
           />
-        </div>
+          {/* Tech Stack */}
+          <CoolMode>
+          <div className="absolute flex gap-2 mt-4 w-full bottom-4 ml-4">
+            {techStack.map((tech, index) => (
+              <CardItem key={index} translateZ="60">
+                
 
-        {/* Black tint at the bottom */}
-        <div className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-black to-transparent"></div>
-
-        <div className="absolute bottom-5 left-4 flex gap-2">
-          {techStack.map((tech, index) => (
-            <div key={index}>
-              <CoolMode>
                 <img
                   src={tech}
                   alt={`tech-${index}`}
-                  className="w-6 h-6 md:w-8 md:h-8 object-contain mr-2 sm:mr-4 hover:scale-110 transition-all"
-                />
-              </CoolMode>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* Tech Stack and Links */}
-      <div className="p-6">
-        <h3 className="text-2xl font-semibold text-cyan-300 mb-3">{title}</h3>
+                  width={32}
+                  height={32}
+                  className="object-contain hover:scale-110 transition-transform mr-4"
+                  />
+                 
+              </CardItem>
+            ))}
+          </div>
+          </CoolMode>
+        </CardItem>
         
-        {/* Description with Read More/Read Less */}
-        <p className="text-gray-300 mb-4">
-          {isExpanded ? description : `${description.substring(0, charLimit)}...`}
+
+        {/* Project Description */}
+        <CardItem
+          as="p"
+          translateZ="60"
+          className="w-full text-neutral-500 text-sm mt-2 dark:text-neutral-300 p-5 "
+        >
+          {isExpanded
+            ? description
+            : `${description.substring(0, charLimit)}...`}
           <span
             onClick={handleToggleDescription}
-            className="text-blue-500  hover:text-blue-400 ml-2"
+            className="text-blue-500 hover:text-blue-400 ml-2 cursor-pointer"
           >
-            {isExpanded ? 'Read Less' : 'Read More'}
+            {isExpanded ? "Read Less" : "Read More"}
           </span>
-        </p>
+        </CardItem>
+
         
-        <div className="flex gap-4">
+
+        {/* Links */}
+        <div className="flex justify-between items-center mt-4">
           {liveLink && (
-            <a
+            <CardItem
+              translateZ="20"
+              as={Link}
               href={liveLink}
               target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-500 hover:text-blue-400"
+              className="text-blue-500 hover:text-blue-400 text-xs font-normal"
             >
-              Live Demo
-            </a>
+              Live Demo →
+            </CardItem>
           )}
           {repoLink && (
-            <a
+            <CardItem
+              translateZ="20"
+              as={Link}
               href={repoLink}
               target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-500 hover:text-blue-400"
+              className="text-blue-500 hover:text-blue-400 text-xs font-normal"
             >
-              GitHub Repo
-            </a>
+              GitHub Repo →
+            </CardItem>
           )}
         </div>
-      </div>
-    </MagicCard>
+      </CardBody>
+    </CardContainer>
   );
-};
-
-export default ProjectCard;
+}
