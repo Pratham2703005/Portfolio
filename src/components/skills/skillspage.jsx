@@ -40,67 +40,58 @@ const Skills = () => {
 
         {/* Right - Skill Categories */}
         <div className="lg:w-3/5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-5 px-4 md:px-8 lg:px-10">
-          
-          {skillCategories.map((category, index) => (
-            <div key={index} className="gap-5 flex flex-col" >
-           
-            <motion.div 
-              
-              className={`hover:scale-105 hover:shadow-2xl transition-all duration-300 transform flex justify-center items-center `}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
-            >
-            <SkillsCard>
-
-              <HyperText className="text-[1.5rem] font-extrabold mb-2 text-blue-400 transition-all duration-300 hover:text-blue-500">
-                {category.title1}
-              </HyperText>
-              <div className="flex flex-wrap gap-2 ">
-                {category.skills1.map((skill, skillIndex) => (
-                  <CoolMode key={skillIndex}>
-                    <motion.span
-                      className="px-4 py-2 bg-cyan-600 text-gray-100 rounded-full text-sm font-medium  hover:bg-blue-500 hover:text-white transition-all duration-300 ease-in-out"
-                      whileHover={{ scale: 1.1, rotate: 5 }}
-                      >
-                      {skill}
-                    </motion.span>
-                  </CoolMode>
-                ))}
-              </div>
-            </SkillsCard>
-            </motion.div>
-            <motion.div 
-              className={`hover:scale-105 hover:shadow-2xl transition-all duration-300 transform flex justify-center items-center `}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
-            >
-            <SkillsCard>
-
-              <HyperText className="text-[1.5rem] font-extrabold mb-2 text-blue-400 transition-all duration-300 hover:text-blue-500">
-                {category.title2}
-              </HyperText>
-              <div className="flex flex-wrap gap-2 ">
-                {category.skills2.map((skill, skillIndex) => (
-                  <CoolMode key={skillIndex}>
-                    <motion.span
-                      className="px-4 py-2 bg-cyan-600 text-gray-100 rounded-full text-sm font-medium  hover:bg-blue-500 hover:text-white transition-all duration-300 ease-in-out"
-                      whileHover={{ scale: 1.1, rotate: 5 }}
-                      >
-                      {skill}
-                    </motion.span>
-                  </CoolMode>
-                ))}
-              </div>
-            </SkillsCard>
-            </motion.div>
-            </div>
-            
-
-
-
-))}
+  {skillCategories.map((category, index) => (
+    <div key={index} className="gap-5 flex flex-col h-full">
+      <motion.div
+        className="hover:scale-105 hover:shadow-2xl transition-all duration-300 transform flex justify-center items-center h-full"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: index * 0.1 }}
+      >
+        <SkillsCard className="h-full flex flex-col justify-between">
+          <HyperText className="text-[1.5rem] font-extrabold mb-2 text-blue-400 transition-all duration-300 hover:text-blue-500">
+            {category.title1}
+          </HyperText>
+          <div className="flex flex-wrap gap-2 mt-auto">
+            {category.skills1.map((skill, skillIndex) => (
+              <CoolMode key={skillIndex}>
+                <motion.span
+                  className="px-4 py-2 bg-cyan-600 text-gray-100 rounded-full text-sm font-medium hover:bg-blue-500 hover:text-white transition-all duration-100 ease-in-out"
+                  whileHover={{ scale: 1.1, rotate: -5 }}
+                >
+                  {skill}
+                </motion.span>
+              </CoolMode>
+            ))}
+          </div>
+        </SkillsCard>
+      </motion.div>
+      <motion.div
+        className="hover:scale-105 hover:shadow-2xl transition-all duration-300 transform flex justify-center items-center h-full"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: index * 0.1 }}
+      >
+        <SkillsCard className="h-full flex flex-col justify-between">
+          <HyperText className="text-[1.5rem] font-extrabold mb-2 text-blue-400 transition-all duration-300 hover:text-blue-500">
+            {category.title2}
+          </HyperText>
+          <div className="flex flex-wrap gap-2 mt-auto">
+            {category.skills2.map((skill, skillIndex) => (
+              <CoolMode key={skillIndex}>
+                <motion.span
+                  className="px-4 py-2 bg-cyan-600 text-gray-100 rounded-full text-sm font-medium hover:bg-blue-500 hover:text-white transition-all duration-100 ease-in-out"
+                  whileHover={{ scale: 1.1, rotate: 5 }}
+                >
+                  {skill}
+                </motion.span>
+              </CoolMode>
+            ))}
+          </div>
+        </SkillsCard>
+      </motion.div>
+    </div>
+  ))}
 
           {/* Problem Solving Card - DSA (C++) */}
           <motion.div 

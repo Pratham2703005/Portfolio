@@ -46,12 +46,11 @@ export function ProjectCard({ image, title, description, liveLink, repoLink, tec
             alt={title}
           />
           {/* Tech Stack */}
-          <CoolMode>
-          <div className="absolute flex gap-2 mt-4 w-full bottom-4 ml-4">
+          
+          <CardContainer className="absolute flex justify-start gap-2 mt-4 w-full bottom-4 ml-4 z-90">
             {techStack.map((tech, index) => (
               <CardItem key={index} translateZ="60">
-                
-
+                <CoolMode>
                 <img
                   src={tech}
                   alt={`tech-${index}`}
@@ -59,11 +58,10 @@ export function ProjectCard({ image, title, description, liveLink, repoLink, tec
                   height={32}
                   className="object-contain hover:scale-110 transition-transform mr-4"
                   />
-                 
+              </CoolMode>
               </CardItem>
             ))}
-          </div>
-          </CoolMode>
+          </CardContainer>
         </CardItem>
         
 
@@ -78,7 +76,7 @@ export function ProjectCard({ image, title, description, liveLink, repoLink, tec
             : `${description.substring(0, charLimit)}...`}
           <span
             onClick={handleToggleDescription}
-            className="text-blue-500 hover:text-blue-400 ml-2 cursor-pointer"
+            className="text-blue-500 hover:text-blue-400 ml-2 "
           >
             {isExpanded ? "Read Less" : "Read More"}
           </span>

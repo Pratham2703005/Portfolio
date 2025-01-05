@@ -16,7 +16,7 @@
   }
   
   .voltage-button button:hover {
-    cursor: pointer;
+    cursor: unset;
     background: #0F1C53;
   }
   

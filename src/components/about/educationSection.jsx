@@ -2,7 +2,7 @@
 /* eslint-disable react/no-unescaped-entities */
 
 import CoolMode from "../ui/CoolMode"
-import { HyperText } from "../ui/HyperText"
+import { NumberTicker } from "../ui/NumberTicker"
 const Education = ({isHyperTextVisible, hyperTextRef}) => {
   return (
     <div className="mt-16 space-y-16 w-full md:w-[80%] md:mx-auto select-none">
@@ -34,8 +34,10 @@ const Education = ({isHyperTextVisible, hyperTextRef}) => {
             <p className="text-lg font-semibold">
               Current CGPA:{" "}
               {isHyperTextVisible && (
-              <HyperText className={"text-cyan-300 text-xl inline"}>7.325</HyperText>
-            )}
+              <span className="text-cyan-300 text-xl">
+                <NumberTicker value={7} className={"!text-cyan-300 !text-xl"}/>.<NumberTicker value={325} className={"!text-cyan-300 !text-xl"}/>
+              </span>
+              )} 
             </p>
           
         </div>
@@ -55,13 +57,19 @@ const Education = ({isHyperTextVisible, hyperTextRef}) => {
               <p className="text-lg font-semibold">
                 12th Grade (PCM): {" "}
                 {isHyperTextVisible && (
-                <HyperText className={"text-cyan-300 text-xl inline"}>85%</HyperText>
+                  <span className={"!text-cyan-300 !text-xl"}>
+                  <NumberTicker value={85} className={"!text-cyan-300 !text-xl"}/>%
+                  </span>
                 )}
               </p>
               <p className="text-lg font-semibold">
                 10th Grade:{" "}
                 {isHyperTextVisible && (
-                <HyperText className={"text-cyan-300 text-xl inline"}>72.3%</HyperText>
+                // <HyperText className={"text-cyan-300 text-xl inline"}>72.3%</HyperText>
+                <span className={"!text-cyan-300 !text-xl"}>
+                  <NumberTicker value={72} className={"!text-cyan-300 !text-xl"}/>.
+                  <NumberTicker value={3} className={"!text-cyan-300 !text-xl"}/>%
+                  </span>
                 )}
               </p>
               
