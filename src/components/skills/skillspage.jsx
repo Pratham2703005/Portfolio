@@ -60,7 +60,7 @@ const Skills = () => {
                 {category.skills1.map((skill, skillIndex) => (
                   <CoolMode key={skillIndex}>
                     <motion.span
-                      className="px-4 py-2 bg-cyan-600 text-gray-100 rounded-full text-sm font-medium cursor-pointer hover:bg-blue-500 hover:text-white transition-all duration-300 ease-in-out"
+                      className="px-4 py-2 bg-cyan-600 text-gray-100 rounded-full text-sm font-medium  hover:bg-blue-500 hover:text-white transition-all duration-300 ease-in-out"
                       whileHover={{ scale: 1.1, rotate: 5 }}
                       >
                       {skill}
@@ -85,7 +85,7 @@ const Skills = () => {
                 {category.skills2.map((skill, skillIndex) => (
                   <CoolMode key={skillIndex}>
                     <motion.span
-                      className="px-4 py-2 bg-cyan-600 text-gray-100 rounded-full text-sm font-medium cursor-pointer hover:bg-blue-500 hover:text-white transition-all duration-300 ease-in-out"
+                      className="px-4 py-2 bg-cyan-600 text-gray-100 rounded-full text-sm font-medium  hover:bg-blue-500 hover:text-white transition-all duration-300 ease-in-out"
                       whileHover={{ scale: 1.1, rotate: 5 }}
                       >
                       {skill}
@@ -112,7 +112,7 @@ const Skills = () => {
             <SkillsCard>
 
             <HyperText className="text-[1.5rem] font-semibold mb-2 text-blue-400 transition-all duration-300 hover:text-blue-500">
-              Problem Solving - DSA (C++)
+              Problem Solving
             </HyperText>
             <p className="text-gray-300 text-lg" style={{ userSelect: "none" }}>
               Passionate about solving complex problems using C++ in Data Structures and Algorithms (DSA). Continuously enhancing my skills through competitive coding platforms and algorithmic challenges.
@@ -122,7 +122,7 @@ const Skills = () => {
               <Link to="https://leetcode.com/u/Pratham012/"  className="w-full md:w-auto" target="_blank">
                 
                 <motion.button 
-                  className="bg-blue-600 w-full text-white py-3 px-6 rounded-lg text-sm font-medium cursor-pointer hover:bg-blue-500 transition-all duration-300 transform hover:scale-105"
+                  className="bg-blue-600 w-full text-white py-3 px-6 rounded-lg text-sm font-medium  hover:bg-blue-500 transition-all duration-300 transform hover:scale-105"
                   whileHover={{ scale: 1.05 }}
                   >
                   Progress on LeetCode
@@ -131,7 +131,7 @@ const Skills = () => {
               <Link to="https://www.geeksforgeeks.org/user/pk2732004/" className="w-full md:w-auto" 
               target="_blank">
                 <motion.button 
-                  className="bg-transparent w-full border-2 border-blue-600 text-blue-600 py-3 px-6 rounded-lg text-sm font-medium cursor-pointer hover:bg-blue-600 hover:text-white transition-all duration-300 transform hover:scale-105"
+                  className="bg-transparent w-full border-2 border-blue-600 text-blue-600 py-3 px-6 rounded-lg text-sm font-medium  hover:bg-blue-600 hover:text-white transition-all duration-300 transform hover:scale-105"
                   whileHover={{ scale: 1.05 }}
                   >
                   Progress on GFG

@@ -10,12 +10,12 @@ export const cloudProps = {
       justifyContent: "center",
       alignItems: "center",
       width: "100%",
-      paddingTop: 40,
+      paddingTop: 35,
     },
   },
   options: {
     reverse: true,
-    depth: 1,
+    depth: 0.7,
     wheelZoom: false,
     imageScale: 1.2, // Reduce this to make icons smaller
     activeCursor: "pointer",
@@ -53,7 +53,9 @@ export function IconCloud({ className, maxSpeed = 0.04, minSpeed = 0.02 }) {
   const renderedIcons = useMemo(
     () =>
       icons.map((icon, index) => (
-        <a key={index}>
+        <a key={index} onClick={(e)=>{
+          e.preventDefault();
+        }}>
           <img
             src={icon.src}
             alt={icon.name}

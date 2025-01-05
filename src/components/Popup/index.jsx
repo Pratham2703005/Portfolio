@@ -75,18 +75,18 @@ const Popup = ({ show, setShow }) => {
            >
                <div className="flex justify-between items-center pt-3 pb-2">
                    <small className="uppercase text-white font-light text-[12px] px-6">general</small>
-                   <FaTimes className="text-white cursor-pointer mr-6" size={15} onClick={() => setShow(false)} />
+                   <FaTimes className="text-white  mr-6" size={15} onClick={() => setShow(false)} />
                </div>
                <motion.p
                    onClick={handleLinkCopy}
-                   className="hover:cursor-pointer text-mid-blue hover:text-white h-fit hover:bg-[#333033] px-6 py-3 font-[300] text-base flex items-center gap-3"
+                   className="hover: text-mid-blue hover:text-white h-fit hover:bg-[#333033] px-6 py-3 font-[300] text-base flex items-center gap-3"
                    variants={childVariants}
                >
                    <FaLink className="text-white" size={18} /> Copy Link
                </motion.p>
                <Link to={"https://mail.google.com/mail/u/0/?fs=1&to=pk2732004@gmail.com&tf=cm"} target="_blank" onClick={() => setShow(false)}>
                    <motion.p
-                       className="hover:cursor-pointer text-mid-blue hover:text-white h-fit hover:bg-[#333033] px-6 py-3 font-[300] text-base flex items-center gap-3"
+                       className="hover: text-mid-blue hover:text-white h-fit hover:bg-[#333033] px-6 py-3 font-[300] text-base flex items-center gap-3"
                        variants={childVariants}
                    >
                        <FaEnvelope className="text-white" size={18} /> Send Email
@@ -94,7 +94,7 @@ const Popup = ({ show, setShow }) => {
                </Link>
                <Link to={"https://github.com/Pratham2703005/Portfolio"} target="_blank" onClick={() => setShow(false)}>
                    <motion.p
-                       className="hover:cursor-pointer text-mid-blue hover:text-white h-fit hover:bg-[#333033] px-6 py-3 font-[300] text-base flex items-center gap-3"
+                       className="hover: text-mid-blue hover:text-white h-fit hover:bg-[#333033] px-6 py-3 font-[300] text-base flex items-center gap-3"
                        variants={childVariants}
                    >
                        <FaCode className="text-white" size={18} /> View Source
@@ -103,37 +103,37 @@ const Popup = ({ show, setShow }) => {
                
                    <small className='uppercase text-white font-light text-[12px] px-6'>go to</small>
                    <Link to={"/"} onClick={() => setShow(false)}>
-                       <motion.p  className="hover:cursor-pointer text-mid-blue hover:text-white h-fit hover:bg-[#333033] px-6 py-3 font-[300] text-base flex items-center gap-3"
+                       <motion.p  className="hover: text-mid-blue hover:text-white h-fit hover:bg-[#333033] px-6 py-3 font-[300] text-base flex items-center gap-3"
                        variants={childVariants}>
                            <FaHome className='text-white' size={18} /> Home
                        </motion.p>
                    </Link>
                    <Link to={"/about"} onClick={() => setShow(false)}>
-                       <motion.p className="hover:cursor-pointer text-mid-blue hover:text-white h-fit hover:bg-[#333033] px-6 py-3 font-[300] text-base flex items-center gap-3"
+                       <motion.p className="hover: text-mid-blue hover:text-white h-fit hover:bg-[#333033] px-6 py-3 font-[300] text-base flex items-center gap-3"
                        variants={childVariants}>
                            <FaUser className='text-white' size={18} /> About
                        </motion.p>
                    </Link>
                    <Link to={"/projects"} onClick={() => setShow(false)}>
-                       <motion.p className="hover:cursor-pointer text-mid-blue hover:text-white h-fit hover:bg-[#333033] px-6 py-3 font-[300] text-base flex items-center gap-3"
+                       <motion.p className="hover: text-mid-blue hover:text-white h-fit hover:bg-[#333033] px-6 py-3 font-[300] text-base flex items-center gap-3"
                        variants={childVariants}>
                            <FaRocket className='text-white' size={18} /> Projects
                        </motion.p>
                    </Link>
                    <Link to={"/contact"} onClick={() => setShow(false)}>
-                       <motion.p className="hover:cursor-pointer text-mid-blue hover:text-white h-fit hover:bg-[#333033] px-6 py-3 font-[300] text-base flex items-center gap-3"
+                       <motion.p className="hover: text-mid-blue hover:text-white h-fit hover:bg-[#333033] px-6 py-3 font-[300] text-base flex items-center gap-3"
                        variants={childVariants}>
                            <FaClock className='text-white' size={18} /> Contact
                        </motion.p>
                    </Link>
                    <Link to={"/stack"} onClick={() => setShow(false)}>
-                       <motion.p className="hover:cursor-pointer text-mid-blue hover:text-white h-fit hover:bg-[#333033] px-6 py-3 font-[300] text-base flex items-center gap-3"
+                       <motion.p className="hover: text-mid-blue hover:text-white h-fit hover:bg-[#333033] px-6 py-3 font-[300] text-base flex items-center gap-3"
                        variants={childVariants}>
                            <FaLayerGroup className='text-white' size={18} /> Stack
                        </motion.p>
                    </Link>
                    <Link to={"/achievements"} onClick={() => setShow(false)}>
-                       <motion.p className="hover:cursor-pointer text-mid-blue hover:text-white h-fit hover:bg-[#333033] px-6 py-3 font-[300] text-base flex items-center gap-3"
+                       <motion.p className="hover: text-mid-blue hover:text-white h-fit hover:bg-[#333033] px-6 py-3 font-[300] text-base flex items-center gap-3"
                        variants={childVariants}>
                            <FaCalendarAlt className='text-white' size={18} /> Achievements
                        </motion.p>

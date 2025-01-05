@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link, Route, Routes } from 'react-router-dom'
 import Navbar from './components/Nav/navbar'
 import './App.css'
@@ -10,8 +10,11 @@ import Skills from './components/skills/skillspage'
 import Contact from './components/contact/contactpage'
 import Achievements from './components/achievements/achievepage'
 import Projects from './components/projects/projectspage'
+import  {initialBlobityOptions} from './utils/blobity.config'
+import useBlobity from "blobity/lib/react/useBlobity";
 
 const App = () => {
+  const blobity = useBlobity(initialBlobityOptions);
   return (
     <div className='App relative'>
       <Navbar/>
@@ -32,6 +35,7 @@ const App = () => {
         
       </div>
       <Footer/>
+      
     </div>
   )
 }

@@ -69,7 +69,7 @@ const ProjectCard = ({ image, title, description, liveLink, repoLink, techStack 
           {isExpanded ? description : `${description.substring(0, charLimit)}...`}
           <span
             onClick={handleToggleDescription}
-            className="text-blue-500 cursor-pointer hover:text-blue-400 ml-2"
+            className="text-blue-500  hover:text-blue-400 ml-2"
           >
             {isExpanded ? 'Read Less' : 'Read More'}
           </span>

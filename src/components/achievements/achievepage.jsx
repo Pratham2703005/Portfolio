@@ -24,7 +24,7 @@ const Achievements = () => {
   <img
     src="/img/sih.jpg"
     alt="SIH 2024 Finalist"
-    className="w-full md:w-1/3 h-[18rem] object-cover rounded-lg mb-6 md:mb-0 md:mr-6 cursor-pointer transform hover:scale-105 transition-transform"
+    className="w-full md:w-1/3 h-[18rem] object-cover rounded-lg mb-6 md:mb-0 md:mr-6  transform hover:scale-105 transition-transform"
     onClick={() => setSelectedImage("/img/sih.jpg")}
   />
   <div className="md:w-2/3">
@@ -53,7 +53,7 @@ const Achievements = () => {
         <img
           src="/img/codewars.jpg"
           alt="Code Wars Winner"
-          className="w-full md:w-1/3 h-[18rem] object-cover rounded-lg mb-6 md:mb-0 md:ml-6 cursor-pointer transform hover:scale-105 transition-transform"
+          className="w-full md:w-1/3 h-[18rem] object-cover rounded-lg mb-6 md:mb-0 md:ml-6  transform hover:scale-105 transition-transform"
           onClick={() => setSelectedImage("/img/codewars.jpg")}
         />
         <div className="md:w-2/3">
@@ -83,7 +83,7 @@ const Achievements = () => {
         <img
           src="/img/hacker.png"
           alt="HackerRank Certifications"
-          className="w-full md:w-1/3 h-[18rem] object-cover rounded-lg mb-6 md:mb-0 md:mr-6 cursor-pointer transform hover:scale-105 transition-transform"
+          className="w-full md:w-1/3 h-[18rem] object-cover rounded-lg mb-6 md:mb-0 md:mr-6  transform hover:scale-105 transition-transform"
           onClick={() => setSelectedImage("/img/hacker.png")}
         />
         <div className="md:w-2/3">
@@ -128,7 +128,7 @@ const Achievements = () => {
           <img
             src="/img/200days.gif"
             alt="LeetCode Achievements"
-            className="cursor-pointer transform hover:scale-105 transition-transform"
+            className=" transform hover:scale-105 transition-transform"
             onClick={() => setSelectedImage("/img/200days.gif")}
           />
         </div>
