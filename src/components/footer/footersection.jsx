@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
-import { FaGithub, FaLinkedin, FaInstagram, FaEnvelope, FaTwitter } from 'react-icons/fa'
+import { FaGithub, FaLinkedin, FaInstagram, FaEnvelope } from 'react-icons/fa'
 import { SiLeetcode } from "react-icons/si";
+import { FaXTwitter } from 'react-icons/fa6';
 const Footer = () => {
     return (
         <div className='w-full absolute bottom-0 z-10 select-none'>
@@ -33,8 +34,8 @@ const Footer = () => {
                 </Link>
                 
                 <Link to={"https://x.com/Pratham85477378"} target='_blank'>
-                    <p className="hidden sm:inline text-mid-blue text-sm font-base hover:text-white  h-min">twitter</p>
-                    <FaTwitter className="sm:hidden text-mid-blue text-xl hover:text-white  h-min" />
+                    <p className="hidden sm:inline text-mid-blue text-sm font-base hover:text-white  h-min">X</p>
+                    <FaXTwitter  className="sm:hidden text-mid-blue text-xl hover:text-white  h-min" />
                 </Link>
             </div>
         </div>

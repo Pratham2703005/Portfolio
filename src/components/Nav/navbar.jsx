@@ -63,9 +63,9 @@ const Navbar = () => {
 
       <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 ">
         <div className="flex items-center justify-between h-16">
-          <Link to="/" className="flex-shrink-0 ">
-            <h1 className="text-5xl font-bold text-white hover:text-gray-300 transition duration-300 ">
-              PI
+          <Link to="/" className="flex-shrink-0 " >
+            <h1 className="text-4xl font-bold text-white hover:text-gray-300 transition duration-300 ">
+              pratham
             </h1>
           </Link>
 
