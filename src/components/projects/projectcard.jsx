@@ -1,7 +1,6 @@
 /* eslint-disable react/prop-types */
 import  { useState, useEffect } from "react";
 import { CardBody,CardContainer,CardItem } from "../ui/Card3D";
-import { Link } from "react-router";
 import CoolMode from "../ui/CoolMode";
 
 export function ProjectCard({ image, title, description, liveLink, repoLink, techStack }) {
@@ -87,20 +86,22 @@ export function ProjectCard({ image, title, description, liveLink, repoLink, tec
         {/* Links */}
         <div className="flex justify-between items-center mt-4">
           {liveLink && (
+            
             <CardItem
               translateZ="20"
-              as={Link}
+              as={"a"}
               href={liveLink}
               target="_blank"
               className="text-blue-500 hover:text-blue-400 text-xs font-normal"
             >
+              {console.log(liveLink)}
               Live Demo →
             </CardItem>
           )}
           {repoLink && (
             <CardItem
               translateZ="20"
-              as={Link}
+              as={"a"}
               href={repoLink}
               target="_blank"
               className="text-blue-500 hover:text-blue-400 text-xs font-normal"
