@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import Popup from '../Popup';
 import CoolMode from '../ui/CoolMode';
 
@@ -8,7 +8,9 @@ const Navbar = () => {
   const [show, setShow] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
-  const [dimensions, setDimensions] = useState({ width: 0, left: 0 });
+  const [activeItem, setActiveItem] = useState(null);
+
+  // const [dimensions, setDimensions] = useState({ width: 0, left: 0 });
   const navRef = useRef(null);
 
   const navItems = [
@@ -31,18 +33,9 @@ const Navbar = () => {
       document.removeEventListener('scroll', handleScroll);
     };
   }, [scrolled]);
-
   useEffect(() => {
-    if (navRef.current) {
-      const activeItem = navRef.current.querySelector(`a[href="${location.pathname}"]`);
-      if (activeItem) {
-        const { width, left } = activeItem.getBoundingClientRect();
-        const navLeft = navRef.current.getBoundingClientRect().left;
-        setDimensions({ width, left: left - navLeft });
-      }
-    }
-  }, [location.pathname]);
-
+    setActiveItem(location.pathname);
+  }, [location]);
   return (
     <>
     {show && <Popup show={show} setShow={setShow} />}
@@ -70,29 +63,40 @@ const Navbar = () => {
           </Link>
 
           <div className="hidden md:block">
-            <div ref={navRef} className="relative flex items-center ml-10 space-x-4">
-              {navItems.map((item, index) => (
-                <Link
-                  key={index}
-                  to={item.path}
-                  className={` relative uppercase text-sm font-light hover:text-white transition duration-300 ${
-                    location.pathname === item.path ? 'text-white' : 'text-gray-400'
-                  } `}
-                >
-                  {item.name}
-                </Link>
-              ))}
-              <motion.div
-                className={`absolute bottom-0 h-0.5 left-[-1rem] bg-blue-500 ${location.pathname === '/'? 'hidden' : ''}`}
-                initial={false}
-                animate={{
-                  width: dimensions.width,
-                  x: dimensions.left,
-                }}
-                transition={{ type: 'spring', stiffness: 300, damping: 30 }}
-              />
+              <div ref={navRef} className="relative flex items-center ml-10 space-x-8">
+                {navItems.map((item, index) => (
+                  <Link
+                    key={index}
+                    to={item.path}
+                    onMouseEnter={() => setActiveItem(item.path)}
+                    onMouseLeave={() => setActiveItem(location.pathname)}
+                  >
+                    <motion.div
+                      className="relative"
+                      whileHover={{ scale: 1.1 }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      <span className={`uppercase text-sm font-light transition duration-300 ${
+                        activeItem === item.path ? 'text-white' : 'text-gray-400'
+                      }`}>
+                        {item.name}
+                      </span>
+                      <AnimatePresence>
+                        {activeItem === item.path && (
+                          <motion.div
+                            className="absolute -bottom-1 left-0 right-0 h-0.5 bg-white"
+                            initial={{ scaleX: 0 }}
+                            animate={{ scaleX: 1 }}
+                            exit={{ scaleX: 0 }}
+                            transition={{ duration: 0.2 }}
+                          />
+                        )}
+                      </AnimatePresence>
+                    </motion.div>
+                  </Link>
+                ))}
+              </div>
             </div>
-          </div>
 
           <div className="flex items-center">
             <CoolMode>

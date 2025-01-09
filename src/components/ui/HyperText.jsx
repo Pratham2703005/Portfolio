@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 // src/components/HyperText.jsx
 import { cn } from "./cn";
 import { AnimatePresence, motion } from "motion/react";

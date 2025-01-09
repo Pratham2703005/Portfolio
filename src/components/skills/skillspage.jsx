@@ -73,7 +73,7 @@ const Skills = () => {
         transition={{ delay: index * 0.1 }}
       >
         <SkillsCard className="h-full flex flex-col justify-between">
-          <HyperText className="text-[1.5rem] font-extrabold mb-2 text-blue-400 transition-all duration-300 hover:text-blue-500">
+          <HyperText className="text-[1.5rem] font-extrabold mb-2 text-blue-400 transition-all duration-300 hover:text-blue-500" duration={400}>
             {category.title2}
           </HyperText>
           <div className="flex flex-wrap gap-2 mt-auto">
@@ -102,7 +102,7 @@ const Skills = () => {
           >
             <SkillsCard>
 
-            <HyperText className="text-[1.5rem] font-semibold mb-2 text-blue-400 transition-all duration-300 hover:text-blue-500">
+            <HyperText className="text-[1.5rem] font-semibold mb-2 text-blue-400 transition-all duration-300 hover:text-blue-500" duration={200}>
               Problem Solving
             </HyperText>
             <p className="text-gray-300 text-lg" style={{ userSelect: "none" }}>

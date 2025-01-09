@@ -37,13 +37,17 @@ export function ProjectCard({ image, title, description, liveLink, repoLink, tec
 
         {/* Project Image */}
         <CardItem translateZ="100" className="w-full mt-4 relative">
+        <div className="relative h-60 w-full rounded-xl group-hover/card:shadow-xl">
           <img
             src={image}
             height={1000}
             width={1000}
-            className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
+            className="h-60 w-full object-cover rounded-xl"
             alt={title}
           />
+          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent rounded-xl"></div>
+        </div>
+
           {/* Tech Stack */}
           
           <CardContainer className="absolute flex justify-start gap-2 mt-4 w-full bottom-4 ml-4 z-90">
