@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { TypeAnimation } from "react-type-animation";
 import Popup from "../Popup";
 import AnimatedShinyText from "../ui/AnimatedShinyText";
-import CoolMode from "../ui/CoolMode";
 import GlitchButton from "../ui/GlitchButton";
 import Spline from '@splinetool/react-spline';
 
@@ -25,11 +24,11 @@ const Home = () => {
   return (
     <>
       {show && <Popup show={show} setShow={setShow} />}
-      <div className="w-full min-h-screen flex items-center overflow-hidden h-100vh z-10 select-none relative">
-        <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+      <div className="w-full min-h-screen flex items-center overflow-hidden h-100vh z-10 select-none relative ">
+        <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8  py-12 sm:py-16">
           <div className="max-w-4xl w-full mx-auto sm:mx-0 space-y-8 sm:space-y-10">
             {/* Hero section */}
-            <CoolMode>
+            
               <div className="space-y-3 text-center sm:text-left">
                 <h1 className="text-4xl sm:text-6xl md:text-5xl font-extrabold text-white tracking-tight 
                             animate-fade-in-up [text-wrap:balance]">
@@ -102,14 +101,14 @@ const Home = () => {
                       </AnimatedShinyText>
                   </GlitchButton>
               </div>
-            </CoolMode>
+           \
           </div>
         </div>
         
                   
-      <div className="absolute right-[-27rem] h-screen w-full">
-        <Spline scene="https://prod.spline.design/xS1HNNv0ZIgymmh8/scene.splinecode" />
-      </div>
+        <div className="absolute hidden lg:block right-[-30rem] h-screen w-[100%]">
+          <Spline scene="https://prod.spline.design/xS1HNNv0ZIgymmh8/scene.splinecode" />
+        </div>
  
 
 
