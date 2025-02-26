@@ -4,6 +4,8 @@ import Popup from "../Popup";
 import AnimatedShinyText from "../ui/AnimatedShinyText";
 import CoolMode from "../ui/CoolMode";
 import GlitchButton from "../ui/GlitchButton";
+import Spline from '@splinetool/react-spline';
+
 
 const Home = () => {
   const [show, setShow] = useState(false);
@@ -23,7 +25,7 @@ const Home = () => {
   return (
     <>
       {show && <Popup show={show} setShow={setShow} />}
-      <div className="w-full min-h-screen flex items-center overflow-hidden h-100vh z-10 select-none">
+      <div className="w-full min-h-screen flex items-center overflow-hidden h-100vh z-10 select-none relative">
         <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
           <div className="max-w-4xl w-full mx-auto sm:mx-0 space-y-8 sm:space-y-10">
             {/* Hero section */}
@@ -103,6 +105,16 @@ const Home = () => {
             </CoolMode>
           </div>
         </div>
+        
+                  
+      <div className="absolute right-[-27rem] h-screen w-full">
+        <Spline scene="https://prod.spline.design/xS1HNNv0ZIgymmh8/scene.splinecode" />
+      </div>
+ 
+
+
+ 
+
       </div>
     </>
   );

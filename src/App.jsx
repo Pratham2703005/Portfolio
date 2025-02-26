@@ -10,11 +10,11 @@ import Skills from './components/skills/skillspage'
 import Contact from './components/contact/contactpage'
 import Achievements from './components/achievements/achievepage'
 import Projects from './components/projects/projectspage'
-import  {initialBlobityOptions} from './utils/blobity.config'
-import useBlobity from "blobity/lib/react/useBlobity";
+// import  {initialBlobityOptions} from './utils/blobity.config'
+// import useBlobity from "blobity/lib/react/useBlobity";
 
 const App = () => {
-  const blobity = useBlobity(initialBlobityOptions);
+  // const blobity = useBlobity(initialBlobityOptions);
   return (
     <div className='App relative'>
       <Navbar/>

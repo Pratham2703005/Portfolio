@@ -4,7 +4,7 @@ import { SiLeetcode } from "react-icons/si";
 import { FaXTwitter } from 'react-icons/fa6';
 const Footer = () => {
     return (
-        <div className='w-full absolute bottom-0 z-10 select-none'>
+        <div className='w-full  select-none'>
             <div className="flex justify-center gap-4 md:gap-10 h-min px-5 overflow-x-auto w-full md:w-auto mt-5 md:mt-0 md:order-none py-5 bg-[rgb(5,5,6)] backdrop-blur">
                 
                 {/* Show Text for larger screens, Show Icons for smaller screens */}
