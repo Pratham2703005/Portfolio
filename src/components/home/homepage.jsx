@@ -106,7 +106,7 @@ const Home = () => {
         </div>
         
                   
-        <div className="absolute hidden lg:block right-[-30rem] h-screen w-[100%]">
+        <div className="absolute hidden lg:block top-[4rem] h-screen w-[100%]">
           <Spline scene="https://prod.spline.design/xS1HNNv0ZIgymmh8/scene.splinecode" />
         </div>
  
