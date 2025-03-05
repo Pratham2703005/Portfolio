@@ -43,8 +43,8 @@ const Achievements = () => {
     },
     {
       title: "LeetCode Achievements",
-      description: `With a commitment to problem-solving, I've completed over 600 questions and maintained a <span class="font-semibold text-blue-300">250+ day streak</span> on LeetCode. My consistent performance earned me a top rank of <span class="font-semibold text-blue-300">1783 / 38868</span> in <span class="font-semibold text-blue-300">Biweekly Contest 134</span> and a solid standing of <span class="font-semibold text-blue-300">2007 / 33382</span> in <span class="font-semibold text-blue-300">Weekly Contest 413</span>. This journey has strengthened my grasp of algorithms, data structures, and competitive coding.`,
-      image: "/img/200days.gif",
+      description: `With a commitment to problem-solving, I've completed over 600 questions and maintained a <span class="font-semibold text-blue-300">350+ day streak</span> on LeetCode. My consistent performance earned me a top rank of <span class="font-semibold text-blue-300">1783 / 38868</span> in <span class="font-semibold text-blue-300">Biweekly Contest 134</span> and a solid standing of <span class="font-semibold text-blue-300">2007 / 33382</span> in <span class="font-semibold text-blue-300">Weekly Contest 413</span>. This journey has strengthened my grasp of algorithms, data structures, and competitive coding.`,
+      image: "/img/365Day.gif",
       links: ["https://leetcode.com/u/Pratham012/"],
       linktexts: ["View Profile"],
       reverse: true,
