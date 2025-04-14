@@ -9,15 +9,15 @@ import SkillsCard from "../ui/SkillsCard";
 const skillCategories = [
   {
     title1: "Frontend",
-    skills1: ["React", "Redux", "HTML5", "CSS3", "JavaScript", "TypeScript", "Tailwind CSS"],
+    skills1: ["Next JS","React JS", "HTML5", "CSS3", "JavaScript", "TypeScript", "Tailwind CSS" ],
     title2: "Backend",
     skills2: ["Node.js", "Express", "Java"],
   },
   {
     title1: "Databases",
-    skills1: ["MongoDB", "Firebase"],
+    skills1: ["MongoDB", "Firebase", "Prisma"],
     title2: "Tools & Platforms",
-    skills2: ["Git", "GitHub", "Vercel", "VS Code", "Postman"],
+    skills2: ["Git", "GitHub", "Vercel", "VS Code", "Postman","Redux Toolkit", "Zustand"],
   },
   
 ];

@@ -17,6 +17,15 @@ const Projects = () => {
       techStack: ["/skills/React.svg", "/skills/tail.svg", "/skills/python.svg", "/skills/mui.svg", "/skills/js.svg", "/skills/firebase.svg"],
     },
     {
+      image: "/project/animeQuiz.png",
+      title: "Anime Quiz",
+      description:
+        "A full-stack Anime Quiz web app built with Next.js, React, and Tailwind CSS. It features user authentication, real-time leaderboard, lifeline-powered quiz gameplay, and dynamic anime category selection. With state management via Zustand, database handling through Prisma and MongoDB, and elegant UI using Shadcn UI, the app offers an interactive and scalable anime quiz experience.",
+      liveLink: "https://anime-quiz-next.vercel.app/",
+      repoLink: "https://github.com/Pratham2703005/Anime-Quiz-Next-",
+      techStack: ["/skills/next.svg", "/skills/React.svg", "/skills/prisma.svg", "/skills/zustand.svg", "/skills/mongo.svg", "/skills/tail.svg"],
+    },
+    {
       image: "/project/pklimate.png",
       title: "Weather App- Pklimate",
       description:
@@ -51,16 +60,9 @@ const Projects = () => {
         liveLink: "https://pratham2703005.github.io/Snake-Game/",
         repoLink: "https://github.com/Pratham2703005/Snake-Game",
         techStack: ["/skills/html.svg", "/skills/css.svg", "/skills/js.svg"],
-      },
-      {
-        image: "/project/memory.png",
-        title: "Memory Game",
-        description:
-          "Developed a memory game using React and Tailwind CSS, offering an interactive and visually appealing experience. The game challenges users to match pairs of cards, enhancing cognitive skills and memory. The responsive design ensures a smooth gameplay experience across devices, while Tailwind's utility-first approach made the styling process efficient and customizable.",
-        liveLink: "https://memory-game-three-jade.vercel.app/",
-        repoLink: "https://github.com/Pratham2703005/Memory-Game",
-        techStack: ["/skills/React.svg", "/skills/tail.svg"],
-      },
+      }
+      
+      
   ];
 
   return (

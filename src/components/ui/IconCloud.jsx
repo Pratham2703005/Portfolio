@@ -47,6 +47,9 @@ const icons = [
   { name: "VSCode", src: "/skills/vs.svg" },
   { name: "Git", src: "/skills/git.svg" },
   { name: "Firebase", src: "/skills/firebase.svg" },
+  { name: "NextJS" , src:"skills/next.svg"},
+  { name: "Zustand" , src:"skills/zustand.svg"},
+  { name: "Prisma" , src:"skills/prisma.svg"},
 ];
 
 export function IconCloud({ className, maxSpeed = 0.04, minSpeed = 0.02 }) {
